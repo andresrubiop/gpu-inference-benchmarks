@@ -1,0 +1,6 @@
+__pycache__/
+.venv/
+.env
+.env.*
+results/run*.json
+results/gpu*.csv

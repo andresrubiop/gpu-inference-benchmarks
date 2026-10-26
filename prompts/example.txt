@@ -1,0 +1,1 @@
+Explain how the size of a language model's key-value cache changes with sequence length and concurrent requests. Give one concrete trade-off between latency, throughput and memory capacity. Separate assumptions from measurements.

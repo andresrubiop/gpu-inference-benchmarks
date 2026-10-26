@@ -1,0 +1,207 @@
+{
+  "record_type": "Historical numeric aggregates, not rerun with the public client",
+  "measurement_date": "2026-07-25",
+  "gpu": "NVIDIA A100-SXM4-40GB",
+  "campaign_credit": [
+    "Andrés Rubio",
+    "Joel Morales"
+  ],
+  "compute_provider": "CEDIA",
+  "source_commit": "1d9c9673d7f46df4f39778231e31ec44744d831f",
+  "comparison_limit": "Different model/quantization settings; not a controlled serving-framework ranking",
+  "excluded": "Hostnames, origins, prompt/response text, institutional documents and raw per-request logs",
+  "series": [
+    {
+      "label": "Ollama · Qwen3-Coder 30B",
+      "model": "qwen3-coder:30b",
+      "source_path": "EVIDENCIA_A100/sesion1_25jul_madrugada/concurrencia_20260725_001714.json",
+      "source_sha256": "f50b6ae2973a47de68b129fb6a9bd16e6c8ccee59f1eef802056663a34835331",
+      "levels": [
+        {
+          "concurrency": 1,
+          "requests": 1,
+          "succeeded": 1,
+          "failed": 0,
+          "wall_s": 1.8492674827575684,
+          "output_tokens": 145,
+          "aggregate_tokens_per_s": 78.40942500312646,
+          "mean_first_content_s": 0.5575335025787354,
+          "max_first_content_s": 0.5575335025787354,
+          "peak_memory_mib": 24445
+        },
+        {
+          "concurrency": 4,
+          "requests": 4,
+          "succeeded": 4,
+          "failed": 0,
+          "wall_s": 5.560783624649048,
+          "output_tokens": 621,
+          "aggregate_tokens_per_s": 111.67490805564162,
+          "mean_first_content_s": 1.0091445446014404,
+          "max_first_content_s": 1.3145854473114014,
+          "peak_memory_mib": 24447
+        },
+        {
+          "concurrency": 8,
+          "requests": 8,
+          "succeeded": 8,
+          "failed": 0,
+          "wall_s": 6.677227973937988,
+          "output_tokens": 1203,
+          "aggregate_tokens_per_s": 180.16458397039182,
+          "mean_first_content_s": 1.042359620332718,
+          "max_first_content_s": 1.7688648700714111,
+          "peak_memory_mib": 24447
+        },
+        {
+          "concurrency": 16,
+          "requests": 16,
+          "succeeded": 16,
+          "failed": 0,
+          "wall_s": 9.632928371429443,
+          "output_tokens": 2366,
+          "aggregate_tokens_per_s": 245.6158614256265,
+          "mean_first_content_s": 1.839387521147728,
+          "max_first_content_s": 3.324038028717041,
+          "peak_memory_mib": 24447
+        },
+        {
+          "concurrency": 32,
+          "requests": 32,
+          "succeeded": 32,
+          "failed": 0,
+          "wall_s": 14.023067951202393,
+          "output_tokens": 4870,
+          "aggregate_tokens_per_s": 347.28491774743395,
+          "mean_first_content_s": 3.894600383937359,
+          "max_first_content_s": 8.936770915985107,
+          "peak_memory_mib": 24447
+        }
+      ]
+    },
+    {
+      "label": "vLLM · Qwen2.5-Coder 32B AWQ",
+      "model": "qwen25-coder-32b-awq",
+      "source_path": "EVIDENCIA_A100/sesion2_25jul_tarde/concurrencia_vllm_20260725_jm.json",
+      "source_sha256": "1481346fd85508e590af439d35216aa23e365527982c7c065dd38568310b1dfb",
+      "levels": [
+        {
+          "concurrency": 1,
+          "requests": 1,
+          "succeeded": 1,
+          "failed": 0,
+          "wall_s": 8.873767614364624,
+          "output_tokens": 277,
+          "aggregate_tokens_per_s": 31.215602215185307,
+          "mean_first_content_s": 0.5370819568634033,
+          "max_first_content_s": 0.5370819568634033,
+          "peak_memory_mib": 38395
+        },
+        {
+          "concurrency": 4,
+          "requests": 4,
+          "succeeded": 4,
+          "failed": 0,
+          "wall_s": 10.327442646026611,
+          "output_tokens": 1108,
+          "aggregate_tokens_per_s": 107.28696715893095,
+          "mean_first_content_s": 1.2235063314437866,
+          "max_first_content_s": 1.5609886646270752,
+          "peak_memory_mib": 38935
+        },
+        {
+          "concurrency": 8,
+          "requests": 8,
+          "succeeded": 8,
+          "failed": 0,
+          "wall_s": 12.390352010726929,
+          "output_tokens": 2216,
+          "aggregate_tokens_per_s": 178.8488331954977,
+          "mean_first_content_s": 1.9529644548892975,
+          "max_first_content_s": 2.89003324508667,
+          "peak_memory_mib": 38935
+        },
+        {
+          "concurrency": 16,
+          "requests": 16,
+          "succeeded": 16,
+          "failed": 0,
+          "wall_s": 16.736289739608765,
+          "output_tokens": 4432,
+          "aggregate_tokens_per_s": 264.8137710899599,
+          "mean_first_content_s": 3.371393069624901,
+          "max_first_content_s": 5.757063865661621,
+          "peak_memory_mib": 38935
+        }
+      ]
+    },
+    {
+      "label": "vLLM · Qwen2.5-Coder 32B AWQ Marlin",
+      "model": "qwen25-coder-32b-awq",
+      "source_path": "EVIDENCIA_A100/sesion2_25jul_tarde/concurrencia_vllm_awqmarlin_20260725_jm.json",
+      "source_sha256": "24597eb7489a6c2fdbe3b417ec247124089048cf2506e55efd04651b00d3cd32",
+      "levels": [
+        {
+          "concurrency": 1,
+          "requests": 1,
+          "succeeded": 1,
+          "failed": 0,
+          "wall_s": 6.6640784740448,
+          "output_tokens": 277,
+          "aggregate_tokens_per_s": 41.566137175433546,
+          "mean_first_content_s": 1.112048625946045,
+          "max_first_content_s": 1.112048625946045,
+          "peak_memory_mib": 39058
+        },
+        {
+          "concurrency": 4,
+          "requests": 4,
+          "succeeded": 4,
+          "failed": 0,
+          "wall_s": 7.327534914016724,
+          "output_tokens": 1108,
+          "aggregate_tokens_per_s": 151.21047023338295,
+          "mean_first_content_s": 1.2392141819000244,
+          "max_first_content_s": 1.480508804321289,
+          "peak_memory_mib": 37674
+        },
+        {
+          "concurrency": 8,
+          "requests": 8,
+          "succeeded": 8,
+          "failed": 0,
+          "wall_s": 9.148182392120361,
+          "output_tokens": 2209,
+          "aggregate_tokens_per_s": 241.46873174530126,
+          "mean_first_content_s": 2.1873054206371307,
+          "max_first_content_s": 2.934812307357788,
+          "peak_memory_mib": 37674
+        },
+        {
+          "concurrency": 16,
+          "requests": 16,
+          "succeeded": 16,
+          "failed": 0,
+          "wall_s": 12.829704284667969,
+          "output_tokens": 4362,
+          "aggregate_tokens_per_s": 339.9922479283308,
+          "mean_first_content_s": 3.721152499318123,
+          "max_first_content_s": 5.866961717605591,
+          "peak_memory_mib": 37674
+        },
+        {
+          "concurrency": 32,
+          "requests": 32,
+          "succeeded": 32,
+          "failed": 0,
+          "wall_s": 25.861449718475342,
+          "output_tokens": 8794,
+          "aggregate_tokens_per_s": 340.04280872613236,
+          "mean_first_content_s": 8.037675619125366,
+          "max_first_content_s": 14.20104718208313,
+          "peak_memory_mib": 38852
+        }
+      ]
+    }
+  ]
+}
